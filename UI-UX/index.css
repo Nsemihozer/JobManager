@@ -1,0 +1,196 @@
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#navbar {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #be3144;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+#navbar a {
+  display: block;
+  font-size: 2rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: #fff;
+}
+ h3 {
+  margin: auto;
+  color:#2c48c5
+}
+main {
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+body {
+  background-color: #e0e2e4;
+}
+
+#add
+{
+  grid-column: 12/13;
+}
+
+
+@media screen and (min-width: 320px) {
+  #navbar {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #be3144;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  }
+  #navbar ul {
+    grid-column: 5/10;
+    display: flex;
+    list-style: none;
+  }
+  #navbar a {
+    font-size: 1em;
+  }
+  #logo {
+    grid-column: 1/5;
+  }
+  #daily {
+    grid-column: span 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #weekly {
+    grid-column: span 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #monthly {
+    grid-column: span 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  #navbar {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #be3144;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  }
+  #navbar ul {
+    grid-column: 6/9;
+    display: flex;
+    list-style: none;
+  }
+  #logo {
+    grid-column: 1/4;
+  }
+  #daily {
+    grid-column: 1/6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #weekly {
+    grid-column: 8/13;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #monthly {
+    margin-top: 100px;
+    grid-column: 4/10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #navbar a {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1010px) {
+  #navbar ul {
+    grid-column: 8/11;
+    display: flex;
+    list-style: none;
+  }
+  #daily {
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #weekly {
+    grid-column: 8/12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #monthly {
+    margin-top: 100px;
+    grid-column: 5/9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #navbar a {
+    font-size: 2em;
+  }
+}
+.High {
+  border-left: 0.55rem solid transparent;
+  border-right: 0.55rem solid transparent;
+  border-bottom: 0.9rem solid #ef3232;
+}
+.Medium {
+  margin-right: 0.88rem;
+  margin-left: 0.08rem;
+  margin-top: 4px;
+  border-bottom: 0.55rem solid transparent;
+  border-top: 0.55rem solid transparent;
+  border-left: 0.9rem solid #ff8901;
+}
+
+.Low {
+  border-left: 0.55rem solid transparent;
+  border-right: 0.55rem solid transparent;
+  border-top: 0.9rem solid #0b9114;
+}
+.High,
+.Low {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  margin-left: 0.8rem;
+}
+.Medium
+{
+  width: 0;
+  height: 0;
+  display: inline-block;
+  margin-left: 2rem;
+}

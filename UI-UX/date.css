@@ -1,0 +1,46 @@
+.TaskAdd {
+  border-radius: 25px;
+  grid-column: 4/10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  height: 80px;
+}
+
+#card {
+  display: flex;
+  background-color: green;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+#card p {
+  margin: 10px 50px;
+}
+@media screen and (min-width: 325px) {
+
+}
+@media screen and (min-width: 768px) {
+  .TaskAdd {
+    grid-column: 2/12;
+  }
+  #card p {
+    margin: 10px 50px;
+  }
+  #container {
+    margin-top: 150px;
+    grid-column: 2/12;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+    .TaskAdd
+    {
+        justify-content: space-evenly;
+    }
+    #container {
+        margin-top: 150px;
+        grid-column: 4/10;
+      }
+}

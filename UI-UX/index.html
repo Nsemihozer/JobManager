@@ -1,0 +1,216 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="logo">
+        <a href="index.html"
+          ><img src="../jobmanager/src/assets/jobmanager.png"
+        /></a>
+      </div>
+      <ul>
+        <li><a href="daily.html">Günlük</a></li>
+        <li><a href="weekly.html">Haftalık</a></li>
+        <li><a href="weekly.html">Aylık</a></li>
+      </ul>
+      <div id="add">
+        <a id="myBtn"><img src="../add.png" /></a>
+      </div>
+    </nav>
+    <main>
+      <div id="daily">
+        <table>
+          <h3>Günlük</h3>
+          <tr>
+            <th>Ad</th>
+            <th>Öncelik</th>
+            <th>Tarih</th>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Yüksek
+              <div class="High"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Yüksek
+              <div class="High"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Yüksek
+              <div class="High"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Orta
+              <div class="Medium"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Düşük
+              <div class="Low"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+        </table>
+      </div>
+      <div id="weekly">
+        <table>
+          <h3>Haftalık</h3>
+          <tr>
+            <th>Ad</th>
+            <th>Öncelik</th>
+            <th>Tarih</th>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Yüksek
+              <div class="High"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Yüksek
+              <div class="High"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Yüksek
+              <div class="High"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Orta
+              <div class="Medium"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Düşük
+              <div class="Low"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+        </table>
+      </div>
+      <div id="monthly">
+        <table>
+          <h3>Aylık</h3>
+          <tr>
+            <th>Ad</th>
+            <th>Öncelik</th>
+            <th>Tarih</th>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Yüksek
+              <div class="High"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Yüksek
+              <div class="High"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Yüksek
+              <div class="High"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Orta
+              <div class="Medium"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+          <tr>
+            <td>Deneme İş</td>
+            <td>
+              Düşük
+              <div class="Low"></div>
+            </td>
+            <td>08.07.2020</td>
+          </tr>
+        </table>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Görev Ekle</h2>
+          </div>
+          <div class="modal-body">
+            <p><input type="text" placeholder="İş Adı Giriniz"></p>
+            <p><input type="date" value="09.08.2020"></p>
+            <label>Öncelik Seçiniz</label>
+            <select name="priority" id="priority">
+              <option value="volvo">Yüksek</option>
+              <option value="saab">Düşük</option>
+              <option value="opel">Orta</option>
+            </select>
+            <p><button id="addbutton">Görev Ekle</button></p>
+          </div>
+        </div>
+      
+      </div>
+      
+      </div>
+    </main>
+
+    <script>
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
+  </body>
+</html>
